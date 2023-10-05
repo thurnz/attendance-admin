@@ -24,7 +24,7 @@ export default function Home() {
         <br></br>
         <input type="password" id="password" />
       </div>
-      <Link href="/tasks" ><button className="mt-10">LOGIN</button></Link>
+      <Link href="/attendance" ><button className="mt-10">LOGIN</button></Link>
       {isMobile &&
         <div className="text-sm cursor-pointer underline p-10 my-10" onClick={handleBiometric}>Login using biometric</div>
       }
