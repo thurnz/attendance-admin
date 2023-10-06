@@ -1,10 +1,17 @@
+'use client';
 import { Fragment } from 'react';
-import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Add() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const name = searchParams.get('name');
   
   return (
     <Fragment>
+      <div className='w-full'>
+        <h1>{name}</h1>
+      </div>
       <div className='w-3/4 mt-2'>
         <label>TASK</label>
         <br></br>
@@ -25,10 +32,8 @@ export default function Add() {
         <br></br>
         <textarea rows={5} className='border border-black w-full'></textarea>
       </div>
-      <Link href='/tasks'>
-        <button className="my-5">SUBMIT</button>
-      </Link>
-      <Link href='/tasks' className='text-sm underline p-2 mx-10'>Cancel</Link>
+      <button className="my-5" onClick={() => router.back()}>SUBMIT</button>
+      <div className='text-sm underline p-2 mx-10 cursor-pointer' onClick={() => router.back()}>Cancel</div>
     </Fragment>
   );
 }

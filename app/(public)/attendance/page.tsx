@@ -9,43 +9,35 @@ export default function Attendance() {
         <div>NAME</div>
       </div>
       <div className='inline-grid grid-cols-1 text-sm text-left w-full'>
-        <Link href='/attendance/logs?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Anselmo, Philip'} }} className='grid grid-cols-2 bg-gray-200 p-2'>
           <div>123456</div>
           <div>Anselmo, Philip</div>
         </Link>
-        <Link href='/attendance/logs?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Cavalera, Max'} }} className='grid grid-cols-2 bg-gray-300 p-2'>
           <div>567890</div>
           <div>Cavalera, Max</div>
         </Link>
-        <Link href='/attendance/logs?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Anselmo, Philip'} }} className='grid grid-cols-2 bg-gray-200 p-2'>
           <div>123456</div>
           <div>Anselmo, Philip</div>
         </Link>
-        <Link href='/attendance/logs?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Cavalera, Max'} }} className='grid grid-cols-2 bg-gray-300 p-2'>
           <div>567890</div>
           <div>Cavalera, Max</div>
         </Link>
-        <Link href='/attendance/logs?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Anselmo, Philip'} }} className='grid grid-cols-2 bg-gray-200 p-2'>
           <div>123456</div>
           <div>Anselmo, Philip</div>
         </Link>
-        <Link href='/attendance?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Cavalera, Max'} }} className='grid grid-cols-2 bg-gray-300 p-2'>
           <div>567890</div>
           <div>Cavalera, Max</div>
         </Link>
-        <Link href='/attendance?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Anselmo, Philip'} }} className='grid grid-cols-2 bg-gray-200 p-2'>
           <div>123456</div>
           <div>Anselmo, Philip</div>
         </Link>
-        <Link href='/attendance?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
-          <div>567890</div>
-          <div>Cavalera, Max</div>
-        </Link>
-        <Link href='/attendance?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
-          <div>123456</div>
-          <div>Anselmo, Philip</div>
-        </Link>
-        <Link href='/attendance?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
+        <Link href={{ pathname: '/attendance/logs', query: {name: 'Cavalera, Max'} }} className='grid grid-cols-2 bg-gray-300 p-2'>
           <div>567890</div>
           <div>Cavalera, Max</div>
         </Link>

@@ -9,13 +9,21 @@ export default function Tasks() {
         <div>NAME</div>
       </div>
       <div className='inline-grid grid-cols-1 text-sm text-left w-full'>
-        <Link href='/tasks/log?name=Anselmo,%20Philip' className='grid grid-cols-2 bg-gray-200 p-2'>
+        <Link href={{ pathname: '/tasks/logs', query: {name: 'Davis, Jonathan'} }}  className='grid grid-cols-2 bg-gray-200 p-2'>
           <div>123456</div>
-          <div>Anselmo, Philip</div>
+          <div>Davis, Jonathan</div>
         </Link>
-        <Link href='/tasks/log?name=Cavalera,%20Max' className='grid grid-cols-2 bg-gray-300 p-2'>
+        <Link href={{ pathname: '/tasks/logs', query: {name: 'Durst, Fred'} }}  className='grid grid-cols-2 bg-gray-300 p-2'>
           <div>567890</div>
-          <div>Cavalera, Max</div>
+          <div>Durst, Fred</div>
+        </Link>
+        <Link href={{ pathname: '/tasks/logs', query: {name: 'Shinoda, Mike'} }}  className='grid grid-cols-2 bg-gray-200 p-2'>
+          <div>123456</div>
+          <div>Shinoda, Mike</div>
+        </Link>
+        <Link href={{ pathname: '/tasks/logs', query: {name: 'Taylor, Corey'} }}  className='grid grid-cols-2 bg-gray-300 p-2'>
+          <div>567890</div>
+          <div>Taylor, Corey</div>
         </Link>
       </div>
     </Fragment>

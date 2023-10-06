@@ -1,26 +1,22 @@
 'use client';
-import { Fragment, useState } from 'react';
-import Link from 'next/link';
+import { Fragment, useContext } from 'react';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { DataContext } from '@/contexts/context';
+import Chart from '@/components/chart';
 
 export default function Logs() {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
-  const [chart, setChart] = useState(false);
-
-  const handleToggle = () => {
-    setChart(!chart);
-  };
+  const { chart } = useContext(DataContext);
+  const router = useRouter();
 
   return (
     <Fragment>
       <div className='w-full relative mb-5'>
         <h1>{name}</h1>
         <h2 className='mb-5 font-bold underline'>October</h2>
-        <div className='text-xs absolute bottom-0 right-0'>
-          <span className={chart ? 'underline cursor-pointer' : 'pointer-events-none'} onClick={handleToggle}>TABLE</span> | <span className={!chart ? 'underline cursor-pointer' : 'pointer-events-none'} onClick={handleToggle}>CHART</span>
-        </div>
+        <Chart />
       </div>
       {chart ? 
         <Image
@@ -98,7 +94,7 @@ export default function Logs() {
           </tbody>
         </table>
       }
-      <Link href="/attendance" ><button className="mt-10">BACK</button></Link>
+      <button className='mt-10' onClick={() => router.back()}>BACK</button>
     </Fragment>
   );
 }

@@ -6,6 +6,7 @@ export const DataContext = createContext<any | null>(null);
 
 export default function Context({ children }: { children: React.ReactNode }) {
   const [isMobile, setIsMobile] = useState(true);
+  const [chart, setChart] = useState(true);
 
   useEffect(() => {
     const handleResize = _.debounce(() => {
@@ -21,8 +22,16 @@ export default function Context({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const handleToggleChart = () => {
+    setChart(!chart);
+  };
+
   return (
-    <DataContext.Provider value={{ isMobile, setIsMobile }}>
+    <DataContext.Provider value={{
+      isMobile, setIsMobile,
+      chart, setChart,
+      handleToggleChart
+      }}>
       {children}
     </DataContext.Provider>
   );
